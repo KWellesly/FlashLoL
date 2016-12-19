@@ -1,0 +1,51 @@
+
+
+body
+{
+    background-color: black;
+    <!--
+    background-size: 50% auto;
+    //-->
+
+    background-repeat: no-repeat;
+}
+
+h1
+{
+    color: gold;
+    font-size: 60px;
+    font-family: "Amaranth", cursive;
+    font-weight: 900;
+
+}
+
+h2
+{
+    color: white;
+    font-family: "Lobster", cursive;
+    font-weight: 600;
+
+}
+p
+{
+
+    color: white;
+
+
+}
+h3
+{
+  color: white;
+  font-family: "Brittanic Bold", cursive;
+  border-left-style: groove;
+  border-bottom-style: groove;
+  display:inline;
+
+  border-color: purple;
+  border-width: 20px;
+  font-size: 30px;
+}
+ul
+{
+    color:white;
+}
