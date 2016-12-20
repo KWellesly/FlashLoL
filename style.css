@@ -3,9 +3,7 @@
 body
 {
     background-color: black;
-    <!--
-    background-size: 50% auto;
-    //-->
+
 
     background-repeat: no-repeat;
 }
@@ -18,6 +16,10 @@ h1
     font-weight: 900;
 
 }
+div
+{
+  background-color:  bisque;
+}
 
 h2
 {
@@ -29,14 +31,23 @@ h2
 p
 {
 
-    color: white;
+    color: purple;
 
 
 }
 h3
 {
-  color: white;
+  font-size: 30px;
+  color: black;
   font-family: "Brittanic Bold", cursive;
+  /*text-decoration: underline;*/
+  border-bottom-style: groove;
+  display:inline;
+  border-color: purple;
+  border-width: 5px;
+
+
+  /*
   border-left-style: groove;
   border-bottom-style: groove;
   display:inline;
@@ -44,8 +55,39 @@ h3
   border-color: purple;
   border-width: 20px;
   font-size: 30px;
+  */
 }
 ul
 {
-    color:white;
+    color: purple;
+}
+
+form
+{
+  float: right;
+  width: 300px;
+
+  padding: 7px;
+  color: white;
+
+
+
+
+
+
+}
+#submit
+{
+  padding: 7px;
+  background: #6de624;
+  border: 1px solid #6de624;
+  color: white;
+
+
+
+}
+#submit:hover
+{
+    background: #333;
+    transition: all 0.40s;
 }
