@@ -1,0 +1,63 @@
+"""
+import json
+from pprint import pprint
+
+with open('matches1.json') as data_file:    
+    data = json.load(data_file)
+
+##pprint(data["matches"][7]["participantIdentities"])
+for each_player in (data["matches"][7]["participantIdentities"]):
+    print (each_player["player"]["summonerName"])
+##pprint(data["matches"][7]["participantIdentities"][0]["player"]["summonerName"])
+"""
+
+import json
+import urllib.request
+
+site = "https://na.api.pvp.net/api/lol/na/v1.2/champion?api_key=RGAPI-fad4a1e2-48d4-4e6b-aae8-b7e088d7d6b1"
+site1 = urllib.request.urlopen(site)
+site2 = site1.read()
+cleaned = site2.decode()
+data = json.loads(cleaned)
+
+
+championSite = "http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json"
+openChampSite = urllib.request.urlopen(championSite)
+cleanedChampData = openChampSite.read()
+cleanedChampData1 = cleanedChampData.decode()
+championData = json.loads(cleanedChampData1)
+
+
+
+champName = input("Enter a champion name: ")
+
+print (championData["data"][champName])
+
+
+
+
+
+
+"""
+//Prints key for every champion!
+for eachChamp in championData["data"]:
+    print (championData["data"][eachChamp]["key"])
+
+"""   
+##print (championData["data"]["Aatrox"])
+
+
+"""
+//Prints each champion's ID#
+print (data["champions"][0]["id"])
+
+for each in (data["champions"]):
+    print (each["id"])
+    
+"""
+
+
+
+
+
+
