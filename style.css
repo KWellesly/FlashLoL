@@ -1,93 +1,189 @@
-
-
-body
-{
-    background-color: black;
-
-
+body {
+    font-family: 'Times New Roman';
+    margin: 0px;
+  
+    background-position: top;
     background-repeat: no-repeat;
-}
-
-h1
-{
-    color: gold;
-    font-size: 60px;
-    font-family: "Amaranth", cursive;
-    font-weight: 900;
+    margin: 0 auto;
 
 }
-div
-{
-  background-color:  bisque;
+
+/*These are Navbar properties - they give it a shadow, allow it to stay fixed at the top of the window, and style the links*/
+.navbar {
+    height: 60px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.90);
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    top: 0px;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
 }
 
-h2
-{
+    .navbar a {
+        line-height: 60px;
+        color: gray;
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: none;
+    }
+
+        .navbar a:hover {
+            color: black;
+        }
+
+/*.sidenav {
+    height: 25%;
+    width: 30px;
+    float: right;
+    text-align: center;
+    background-color: #555;
+}
+
+.sidenav a {
+    padding: 10px;
+    display: block;
+    transition: all 0.3s ease;
     color: white;
-    font-family: "Lobster", cursive;
-    font-weight: 600;
+    font-size: 16px;
+}*/
+/*
+.sidenav a:hover {
+    background-color: #000;
+}*/
+
+/*Header properties*/
+.header {
+    width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 150px;
 
 }
-p
-{
-
-    color: purple;
-
-
-}
-h3
-{
-  font-size: 30px;
-  color: black;
-  font-family: "Brittanic Bold", cursive;
-  /*text-decoration: underline;*/
-  border-bottom-style: groove;
-  display:inline;
-  border-color: purple;
-  border-width: 5px;
-
-
-  /*
-  border-left-style: groove;
-  border-bottom-style: groove;
-  display:inline;
-
-  border-color: purple;
-  border-width: 20px;
-  font-size: 30px;
-  */
-}
-ul
-{
-    color: purple;
+/*
+#header_image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    float: left;
 }
 
-form
-{
-  float: right;
-  width: 300px;
+#header_image2 {
+    width: 220px;
+    height: 220px;
+    border-radius: 100px;
+    float: right;
+}*/
 
-  padding: 7px;
-  color: white;
-
-
-
-
+.icons {
 
 
 }
-#submit
-{
-  padding: 7px;
-  background: #6de624;
-  border: 1px solid #6de624;
-  color: white;
 
 
 
+h1 {
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 70px;
+    padding-left: 90px;
+    margin: 0px;
+    text-align: center;
+    float: left;
+    margin-top: 20px;
 }
-#submit:hover
-{
-    background: #333;
-    transition: all 0.40s;
+
+/*Standard content section properties*/
+.content {
+    clear: both;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    left: 0px;
+    right: 0px;
+    font-size: medium;
+    background-color: white;
 }
+
+h2 {
+    font-weight: 300;
+    font-size: x-large;
+}
+
+/*Additional parallax section properties*/
+.parallax {
+    -webkit-box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5), inset 0px -10px 10px -4px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5), inset 0px -10px 10px -4px rgba(50, 50, 50, 0.5);
+    box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5), inset 0px -10px 10px -4px rgba(50, 50, 50, 0.5);
+    background-image: url('collection image.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Forms transparent boxes on which content can float in a parallax section*/
+.floating {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 7px 7px 10px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 7px 7px 10px 0px rgba(50, 50, 50, 0.4);
+    box-shadow: 7px 7px 10px 0px rgba(50, 50, 50, 0.4);
+    padding: 5px;
+}
+
+ul.floating {
+    padding-left: 45px;
+    text-align: center;
+}
+
+/*Footer properties*/
+.footer {
+    clear: both;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    left: 0px;
+    right: 0px;
+    font-size: medium;
+    background-color: /*pick a color*/;
+    color: white;
+    -webkit-box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5);
+    box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5);
+}
+
+/*These align content to the left and right of a screen for 2 columns*/
+.left-content {
+    float: left;
+    display: inline;
+    width: 50%;
+}
+
+.right-content {
+    float: right;
+    display: inline;
+    width: 50%;
+    font-size: small;
+    text-align: right;
+}
+
+
+.important {
+    font-size: large;
+}
+
+.post {
+width: 820px;
+margin-left: auto ;
+margin-right: auto ;
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
