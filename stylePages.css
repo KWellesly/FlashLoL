@@ -1,0 +1,93 @@
+
+.alignleft
+{
+	float: left;
+}
+.alignright
+{
+	float: right;
+}
+.aligncenter
+{
+	text-align:center;
+}
+.alternateBuildOrder, .standardBuildOrder, .abilities, .advice, .runesAndMasteries
+{
+	font-family: fantasy;
+}
+.tableForRunes
+{
+	
+}
+
+#textbox
+{
+  color: blue;
+}
+/*
+#advertisement
+{
+  position: absolute;
+  right: 25px;
+  width: 10%;
+  height: 80%;
+  background-color:black;
+
+}
+*/
+.champIcon
+{
+  float: left;
+
+}
+.descriptionForChamp
+{
+	/*
+	display: inline-block;
+	height: 200;
+	width: 100%;
+*/
+
+}
+#content
+{
+	display:inline-block;
+	vertical-align:top;
+	background-color: pink;
+}
+
+#runesAndMasteries
+{
+	background-color: lightblue;
+	width: 100%;
+	height: 100px;
+}
+
+th
+{
+	padding: 10px;
+	text-align:left;
+}
+
+.tableForAbilities, .tableForStandardBuildOrder, .tableForAlternateBuildOrder, th, td
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+#tableForAbilities
+{
+	background-color: silver;
+}
+#standardBuildOrder
+{
+	background-color: tan;
+}
+#alternateBuildOrder
+{
+	background-color: yellow;
+}
+#quickAdvice
+{
+	background-color: gray;
+	height: 50px;
+}
