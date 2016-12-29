@@ -1,13 +1,13 @@
-import sched, time
+
 import urllib.request
 import json
 
 
 
 
-s = sched.scheduler(time.time, time.sleep)
 
-def dlAPIs(sc):
+
+def dlAPIs():
     riotFile = "http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/summoner.json"
     ##Summoner spells... change to whatever file is needed
     riotFile = "http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/summoner.json"
@@ -18,11 +18,7 @@ def dlAPIs(sc):
     dlRiotFile.write(riotFile)
     
     
-    print ("Doing stuff...")
+dlAPIs()
     
-    
-    s.enter(86400, 1, dlAPIs, (sc,))
 
-s.enter(86400, 1, dlAPIs, (s,))
-s.run()
 
