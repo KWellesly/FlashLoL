@@ -34,9 +34,9 @@ if (isset($_GET["submit"])) {
         $champList = json_decode(file_get_contents('championList.json'));
         if (in_array(strtolower($input), $champList)) {
             $key = ucwords($input, "\'");
-            $dictionary = json_decode(file_get_contents('championKeysAndNames.json'), true);
+            $dictionary = json_decode(file_get_contents('championPageData.json'), true)['championKeysAndNames'];
             $champion = $dictionary['nameToKey'][$key];
-            header( "Location: http://localhost/champion/".$champion );
+            header( "Location: champion/".$champion );
             die();
         } else {
             echo "That champion does not exist! Make sure you search with the exact lettering, e.g. Cho'Gath, not ChoGath";
