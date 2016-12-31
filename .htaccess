@@ -104,28 +104,28 @@ order allow,deny
 deny from all
 </Files>
 
+#Prevent explicitly requesting any python files
+<Files ~ "\.py$">
+  Order allow,deny
+  Deny from all
+</Files>
+
+#Prevent explicitly requesting any json files
+<Files ~ "\.json$">
+  Order allow,deny
+  Deny from all
+</Files>
+
 #Prevent directory listings and multiviews search
 Options All -Indexes -MultiViews
 
 #Rewrite all url links (e.g. example.com/champion/Champ -> example.com/showChamp?=Champ)
-RewriteCond %{REQUEST_FILENAME}.php !-f
 RewriteRule ^champion/(.*)$ showChampion.php?champion=$1 [L,NC]
 
 #Do not display .php extensions
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L]
-
-#Prevent explicitly requesting any python files
-<Files ~ "\.py$">
-  Order allow,deny
-  Deny from all
-</Files>
-#Prevent explicitly requesting any json files
-<Files ~ "\.json$">
-  Order allow,deny
-  Deny from all
-</Files>
 
 #Prevent redirect loops
 RewriteCond %{ENV:REDIRECT_STATUS} !^$
@@ -135,4 +135,4 @@ RewriteRule .* /error [L]
 #Route all direct requests for .php files to error
 RewriteCond %{THE_REQUEST} \.php
 RewriteCond %{REQUEST_FILENAME} !error.php$
-RewriteRule .* /error.php [L]
+RewriteRule .* /error [L]
