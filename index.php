@@ -28,15 +28,18 @@ if (isset($_GET["submit"])) {
     if (isset($_GET["champion"])) {
         $input = $_GET["champion"];
     }
-    if (preg_match('[\W]', $input)) {
+    if (preg_match('/[$&+,:;=?@#|<>.^*()%!-]/', $input)) {
         echo "Your input contains invalid characters.";
     } else {
         $champList = json_decode(file_get_contents('championList.json'));
         if (in_array(strtolower($input), $champList)) {
-            header( "Location: http://localhost/champion/".$input );
+            $key = ucwords($input, "\'");
+            $dictionary = json_decode(file_get_contents('championKeysAndNames.json'), true);
+            $champion = $dictionary['nameToKey'][$key];
+            header( "Location: http://localhost/champion/".$champion );
             die();
         } else {
-            echo "That champion does not exist!";
+            echo "That champion does not exist! Make sure you search with the exact lettering, e.g. Cho'Gath, not ChoGath";
         }
     }
 }
