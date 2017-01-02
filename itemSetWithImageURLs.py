@@ -11,15 +11,19 @@ itemsetJson = json.loads(urllib.request.urlopen(itemsetAPI).read().decode())
 itemID = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?api_key=RGAPI-fad4a1e2-48d4-4e6b-aae8-b7e088d7d6b1"
 itemIDJson = json.loads(urllib.request.urlopen(itemID).read().decode())
 
+itemImages = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?itemListData=image&api_key=RGAPI-fad4a1e2-48d4-4e6b-aae8-b7e088d7d6b1"
+itemImagesJson = json.loads(urllib.request.urlopen(itemImages).read().decode())
 
 
 
 
-                       
+
+
+
 champion = input("Please enter a champion you'd like to see a build for: ")
 champID = (siteChampIDJson["data"][champion]["key"])
 
-##print (itemsetJson["data"][champion]["recommended"][0]["mode"])
+
 
 
 for each in (itemsetJson["data"][champion]["recommended"]):
@@ -29,21 +33,12 @@ for each in (itemsetJson["data"][champion]["recommended"]):
                 print (eachBuildType["type"])
                 for eachItem in eachBuildType["items"]:
                     itemID = str(eachItem["id"])
-                    print (itemID + " " + itemIDJson["data"][itemID]["name"])
-                
-                
+                    print ("itemID:" + itemID + " " + itemIDJson["data"][itemID]["name"] + " " + "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/" + str(itemImagesJson["data"][itemID]["image"]["full"]))
+
+
 
                 print ()
                 print ()
-
-
-
-
-
-
-
-
-
 
 
 
