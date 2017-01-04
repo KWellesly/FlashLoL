@@ -55,7 +55,8 @@ $r = $abilities[3];
 
   <div id="content">
       <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/champion/".$icon; ?>" class="champIcon" width = "200" height = "200" alt="Champ Pic">
-      <h2 class="descriptionForChamp">Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here
+      <h2 class="descriptionForChamp">
+      Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here
       </h2>
       <!-- CODE FOR THE ADVERTISEMENT SECTION
       <div id="advertisement">
@@ -63,24 +64,6 @@ $r = $abilities[3];
       </div>
     -->
   </div>
-
-
-  <br><br>
-
-  <div id="runesAndMasteries">
-    <p class="runesAndMasteries">Insert runes and masteries here <p>
-    <table class="tableForRunes">
-      <tr>
-        <th>Image of rune ("alt"=description of rune) X 9... etc</th>
-        <th>Image of rune ("alt"=description of rune) X 9... etc</th>
-        <th>Image of rune ("alt"=description of rune) X 9... etc</th>
-      </tr>
-    </table>
-
-  </div>
-
-  <br><br>
-
 
   <div id="tableForAbilities">
     <p class="abilities">Skill Order</p>
@@ -117,56 +100,24 @@ $r = $abilities[3];
     </div>
 
       <br><br>
-
-    <div id="standardBuildOrder">
-      <p class="standardBuildOrder">Standard Build Order</p>
-      <table class="tableForStandardBuildOrder">
-        <tr>
-          <th class="aligncenter">1</th>
-          <th class="aligncenter">2</th>
-          <th class="aligncenter">3</th>
-          <th class="aligncenter">4</th>
-          <th class="aligncenter">5</th>
-          <th class="aligncenter">6</th>
-        </tr>
-
-        <tr>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-        </tr>
-
-      </table>
-    </div>
-
-    <div id="alternateBuildOrder">
-      <p class="alternateBuildOrder">Alternate Build Order</p>
-      <table class="tableForAlternateBuildOrder">
-        <tr>
-          <th class="aligncenter">1</th>
-          <th class="aligncenter">2</th>
-          <th class="aligncenter">3</th>
-          <th class="aligncenter">4</th>
-          <th class="aligncenter">5</th>
-          <th class="aligncenter">6</th>
-        </tr>
-
-        <tr>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-          <th>Insert picture of item here</th>
-        </tr>
-      </table>
-    </div>
-
-    <div id="quickAdvice">
-      <p class="advice">Insert quick advice</p>
-    </div>
-
-    <br><br>
+    <?php
+    foreach ($dictionary['data'][$championKey]['recommended'] as $setKey => $set) {
+        echo "
+        <div id=\"standardBuildOrder\">
+            <p class=\"standardBuildOrder\">".ucwords($setKey)."</p>
+            <table class=\"tableForStandardBuildOrder\">
+                <tr>
+                ";
+            foreach ($set as $item) {
+                echo "<th>";
+                echo $item['name'];
+                echo "<img class=\"alignleft\" src=\"http://ddragon.leagueoflegends.com/cdn/".$version."/img/item/".$item['image']."\" class=\"abilityIcon\" width = \"50\" height = \"50\" alt=\"".$item['name']."\">";
+                echo "</th>";
+            }
+        echo "
+                </tr>
+            </table>
+        </div>
+        ";
+    }
+    ?>
