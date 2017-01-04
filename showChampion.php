@@ -104,7 +104,7 @@ $r = $abilities[3];
     foreach ($dictionary['data'][$championKey]['recommended'] as $setKey => $set) {
         echo "
         <div id=\"standardBuildOrder\">
-            <p class=\"standardBuildOrder\">".ucwords($setKey)."</p>
+            <p class=\"standardBuildOrder\">".ucwords($setKey, "_")."</p>
             <table class=\"tableForStandardBuildOrder\">
                 <tr>
                 ";
