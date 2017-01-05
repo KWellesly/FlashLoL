@@ -32,15 +32,22 @@ $r = $abilities[3];
 </head>
 <body>
 
+  <div id="titleLine">
+    <p class="aligncenter">
+      <a href="league.html">
+        <img src="logo.jpg">
+      </a>
+    </p>
+</div>
+    <p class="alignright">
+      <form action = "https://www.google.com">
+<ul class="floating">
+      <input type="submit" value="Search" id="submit" style="float:right;">
+        <input type="text" placeholder= "Search for a champion... " maxlength="20" id="search" style="width:300px; height:15px; float:right;">
+    </p>
+    </form>
 
-
-
-    <div id="titleLine">
-      <p class="alignleft"><a href="/">FlashOnF Logo/Fancy writing</a></p>
-      <p class="alignright">Search Bar</p>
-    </div>
-
-
+</ul>
 
     <br>
     <br>
@@ -52,11 +59,10 @@ $r = $abilities[3];
 
 
 
-
+ <ul class="floating">
   <div id="content">
       <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/champion/".$icon; ?>" class="champIcon" width = "200" height = "200" alt="Champ Pic">
-      <h2 class="descriptionForChamp">
-      Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here
+      <h2 class="descriptionForChamp">Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here Insert description of champion here
       </h2>
       <!-- CODE FOR THE ADVERTISEMENT SECTION
       <div id="advertisement">
@@ -64,9 +70,32 @@ $r = $abilities[3];
       </div>
     -->
   </div>
+</ul>
 
+  <br><br>
+
+  <div class="content parallax">
+       <h2 class="floating">
+  <div id="runesAndMasteries">
+    <p class="runesAndMasteries">Insert runes and masteries here <p>
+    <table class="tableForRunes">
+      <tr>
+        <th>Image of rune ("alt"=description of rune) X 9... etc</th>
+        <th>Image of rune ("alt"=description of rune) X 9... etc</th>
+        <th>Image of rune ("alt"=description of rune) X 9... etc</th>
+      </tr>
+    </table>
+</div>
+</ul>
+  <br><br>
+
+  <div class="content parallax">
+       <h2 class="floating">
   <div id="tableForAbilities">
     <p class="abilities">Skill Order</p>
+  </h2>
+
+       <ul class="floating">
     <table class="tableForAbilities">
       <tr>
         <th>
@@ -98,26 +127,67 @@ $r = $abilities[3];
       </tr>
     </table>
     </div>
-
+</ul>
       <br><br>
-    <?php
-    foreach ($dictionary['data'][$championKey]['recommended'] as $setKey => $set) {
-        echo "
-        <div id=\"standardBuildOrder\">
-            <p class=\"standardBuildOrder\">".ucwords($setKey, "_")."</p>
-            <table class=\"tableForStandardBuildOrder\">
-                <tr>
-                ";
-            foreach ($set as $item) {
-                echo "<th>";
-                echo $item['name'];
-                echo "<img class=\"alignleft\" src=\"http://ddragon.leagueoflegends.com/cdn/".$version."/img/item/".$item['image']."\" class=\"abilityIcon\" width = \"50\" height = \"50\" alt=\"".$item['name']."\">";
-                echo "</th>";
-            }
-        echo "
-                </tr>
-            </table>
-        </div>
-        ";
-    }
-    ?>
+
+      <div class="content parallax">
+           <h2 class="floating">
+    <div id="standardBuildOrder">
+      <p class="standardBuildOrder">Standard Build Order</p>
+    </h2>
+     <ul class="floating">
+      <table class="tableForStandardBuildOrder">
+        <tr>
+          <th class="aligncenter">1</th>
+          <th class="aligncenter">2</th>
+          <th class="aligncenter">3</th>
+          <th class="aligncenter">4</th>
+          <th class="aligncenter">5</th>
+          <th class="aligncenter">6</th>
+        </tr>
+
+        <tr>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+        </tr>
+
+      </table>
+    </div>
+  </ul>
+
+  <div class="content parallax">
+       <h2 class="floating">
+    <div id="alternateBuildOrder">
+      <p class="alternateBuildOrder">Alternate Build Order</p>
+    </h2>
+       <ul class="floating">
+      <table class="tableForAlternateBuildOrder">
+        <tr>
+          <th class="aligncenter">1</th>
+          <th class="aligncenter">2</th>
+          <th class="aligncenter">3</th>
+          <th class="aligncenter">4</th>
+          <th class="aligncenter">5</th>
+          <th class="aligncenter">6</th>
+        </tr>
+
+        <tr>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+          <th>Insert picture of item here</th>
+        </tr>
+      </table>
+    </div>
+
+    <div id="quickAdvice">
+      <p class="advice">Insert quick advice</p>
+    </div>
+</ul>
+    <br><br>

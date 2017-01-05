@@ -1,7 +1,14 @@
+body
+{
+	background-image: url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/artbook/en_US/0b00015eea33312a3d72140f200e668f9fa6c346/assets/content/summoners_rift/16_tenets/tenets_01.jpg");
+	background-size: cover;
+
+}
 
 .alignleft
 {
-	float: left;
+
+	padding-left: 14em;
 }
 .alignright
 {
@@ -11,18 +18,29 @@
 {
 	text-align:center;
 }
+.alignleftIm
+{
+	float: left;
+}
+h1
+{
+color: white;
+}
+
 .alternateBuildOrder, .standardBuildOrder, .abilities, .advice, .runesAndMasteries
 {
 	font-family: fantasy;
+	font color: white;
 }
 .tableForRunes
 {
-	
+
 }
 
 #textbox
 {
   color: blue;
+	font color: white;
 }
 /*
 #advertisement
@@ -32,35 +50,31 @@
   width: 10%;
   height: 80%;
   background-color:black;
-
 }
 */
 .champIcon
 {
-  float: left;
+  /*float: left;*/
 
 }
 .descriptionForChamp
 {
-	/*
-	display: inline-block;
-	height: 200;
-	width: 100%;
-*/
 
+	display: inline;
+	height: 150;
+	width: 100%;
 }
 #content
 {
 	display:inline-block;
 	vertical-align:top;
-	background-color: pink;
+	font color: white;
 }
 
 #runesAndMasteries
 {
 	background-color: lightblue;
-	width: 100%;
-	height: 100px;
+	font color: white;
 }
 
 th
@@ -73,21 +87,53 @@ th
 {
 	border: 1px solid black;
 	border-collapse: collapse;
+	font color: white;
 }
 #tableForAbilities
 {
 	background-color: silver;
+	font color: white;
 }
 #standardBuildOrder
 {
 	background-color: tan;
+	font color: white;
 }
 #alternateBuildOrder
 {
 	background-color: yellow;
+	font color: white;
 }
 #quickAdvice
 {
 	background-color: gray;
 	height: 50px;
+	font color: white;
+}
+#center
+{
+	width: 70%;
+ 	margin: 0 auto;
+}
+
+.parallax {
+    -webkit-box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5), inset 0px -10px 10px -4px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5), inset 0px -10px 10px -4px rgba(50, 50, 50, 0.5);
+    box-shadow: inset 0px 10px 10px -4px rgba(50, 50, 50, 0.5), inset 0px -10px 10px -4px rgba(50, 50, 50, 0.5);
+    background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/artbook/en_US/0b00015eea33312a3d72140f200e668f9fa6c346/assets/content/champion/16_end/end_01.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.floating {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 7px 7px 10px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 7px 7px 10px 0px rgba(50, 50, 50, 0.4);
+    box-shadow: 7px 7px 10px 0px rgba(50, 50, 50, 0.4);
+    padding: 8px;
+}
+
+ul.floating {
+    padding-left: 45px;
+    text-align: center;
 }
