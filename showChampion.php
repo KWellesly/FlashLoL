@@ -23,6 +23,14 @@ $q = $abilities[0];
 $w = $abilities[1];
 $e = $abilities[2];
 $r = $abilities[3];
+if (isset($_POST["submit"])) {
+    $input = "";
+    if (isset($_POST["champion"])) {
+        $input = $_POST["champion"];
+        header( "Location: /?champion=".$input."&submit=Search" );
+        die();
+    }
+}
 ?>
 <head>
     <title>FlashOnF <?php echo $championName; ?></title>
@@ -38,10 +46,9 @@ $r = $abilities[3];
     </div>
     <ul class="floating">
         <p class="alignright">
-            <form action = "/">
-
-                    <input type="submit" value="Search" id="submit" style="float:right;">
-                    <input type="text" placeholder= "Search for a champion... " maxlength="20" id="search" style="width:300px; height:15px; float:right;">
+            <form method="POST">
+                <input type="submit" value="Search" id="submit" style="float:right;" name="submit">
+                <input type="text" placeholder= "Search for a champion... " maxlength="20" id="search" style="width:300px; height:15px; float:right;" name="champion">
             </form>
         </p>
     </ul>
@@ -49,13 +56,12 @@ $r = $abilities[3];
     <br><br>
     
     <center>
-    <h1>
-        <?php
-        echo $championName;
-        ?>
-    </h1></center>
-
-
+        <h1>
+            <?php
+            echo $championName;
+            ?>
+        </h1>
+    </center>
 
     <ul class="floating">
         <div id="content">
