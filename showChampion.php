@@ -30,24 +30,24 @@ $r = $abilities[3];
 </head>
 <body>
     <div id="titleLine">
-        <p class="aligncenter">
+        <p class="alignleft">
             <a href="/">
-                <img src="/logo.png">
+                <img src="/logo.png" width = "75" height = "75" class="alignleft">
             </a>
         </p>
     </div>
-    <p class="alignright">
-        <form action = "/">
-            <ul class="floating">
-                <input type="submit" value="Search" id="submit" style="float:right;">
-            </ul>
-            <ul class="floating">
-                <input type="text" placeholder= "Search for a champion... " maxlength="20" id="search" style="width:300px; height:15px; float:right;">
-            </ul>
-        </form>
-    </p>
-    <br>
-    <br>
+    <ul class="floating">
+        <p class="alignright">
+            <form action = "/">
+
+                    <input type="submit" value="Search" id="submit" style="float:right;">
+                    <input type="text" placeholder= "Search for a champion... " maxlength="20" id="search" style="width:300px; height:15px; float:right;">
+            </form>
+        </p>
+    </ul>
+
+    <br><br>
+    
     <center>
     <h1>
         <?php
@@ -75,7 +75,7 @@ $r = $abilities[3];
     <ul class="floating">
         <div class="content parallax">
             <div id="tableForAbilities">
-                <p class="abilities">Skill Order</p>
+                <p class="abilities">Skill</p>
                 <table class="tableForAbilities">
                     <tr>
                         <th>
