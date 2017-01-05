@@ -14,6 +14,9 @@
   <br>
   <br>
   <input type="submit" value="Search" id="submit" name="submit">
+  <br>
+  <br>
+  <a href="/champion">List of Champions</a>
 </div>
 </div>
 <div>
