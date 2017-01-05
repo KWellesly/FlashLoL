@@ -1,0 +1,54 @@
+body
+{
+
+    text-align: center;
+    background-repeat: no-repeat;
+    font-size: 60;
+    background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/artbook/en_US/0b00015eea33312a3d72140f200e668f9fa6c346/assets/content/summoners_rift/16_tenets/tenets_01.jpg');
+}
+
+
+h2
+{
+    color: white;
+    font-family: "Lobster", cursive;
+    font-weight: 600;
+    text-align: center;
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-size: 60;
+}
+
+ul
+{
+    color: purple;
+}
+
+form
+{
+  float: none;
+  width: 300px;
+
+  padding: 6px;
+  color: white;
+
+}
+#submit
+{
+  padding: 8px;
+  background: #33DBFF;
+  border: 1px solid #33FFBD;
+  color: white;
+
+}
+#submit:hover
+{
+    background: #333;
+    transition: all 0.40s;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
