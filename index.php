@@ -3,10 +3,7 @@
 <head>
     <title>FlashOnF</title>
     <link rel="stylesheet" href="style.css">
-
-
 </head>
-
 <body>
   <div class="content parallax">
   <div class = "centered">
@@ -17,7 +14,6 @@
   <br>
   <br>
   <input type="submit" value="Search" id="submit" name="submit">
-
 </div>
 </div>
 <div>
@@ -34,6 +30,7 @@ if (isset($_GET["submit"])) {
         $champList = json_decode(file_get_contents('championList.json'));
         if (in_array(strtolower($input), $champList)) {
             $key = ucwords($input, "\'");
+            $key = ucwords($input);
             $dictionary = json_decode(file_get_contents('championPageData.json'), true)['championKeysAndNames'];
             $champion = $dictionary['nameToKey'][$key];
             header( "Location: champion/".$champion );
