@@ -54,10 +54,15 @@ for names in staticChampionData['data']:
                     itemization[eachBuildType['type']] = recommendedBuild
     champions[names]['recommended'] = itemization;
 
+#Add champion descriptions
 with open('championDescriptions.json', 'r') as descriptionFile:
     descriptions = json.load(descriptionFile)
     for names in staticChampionData['data']:
         champions[names]['description'] = descriptions[names]
+
+#Add champion names
+for key in staticChampionData['data']:
+    champions[key]['name'] = championKeysAndNames['keyToName'][key]
 
 #Compile data into one file
 netData = {'championKeysAndNames' : championKeysAndNames, 'data' : champions, 'version' : staticChampionData['version']}
