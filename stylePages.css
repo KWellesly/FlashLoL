@@ -4,6 +4,11 @@ body
 	background-size: cover;
 
 }
+.searchBar
+{
+	padding-right: 25px;
+	
+}
 
 .alignleft
 {
@@ -86,7 +91,7 @@ th
 
 .tableForAbilities, .tableForStandardBuildOrder, .tableForAlternateBuildOrder, th, td
 {
-	
+
 	border: 1px solid black;
 	border-collapse: collapse;
 	font color: white;
