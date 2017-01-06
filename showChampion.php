@@ -43,23 +43,19 @@ if (isset($_POST["submit"])) {
                 <img src="/logo.png" width = "75" height = "75" class="alignleft">
             </a>
         </p>
-    </div>
-    <ul class="floating">
         <p class="alignright">
-            <form method="POST">
+            <form class="searchBar" method="POST">
                 <input type="submit" value="Search" id="submit" style="float:right;" name="submit">
                 <input type="text" placeholder= "Search for a champion... " maxlength="20" id="search" style="width:300px; height:15px; float:right;" name="champion">
             </form>
         </p>
-    </ul>
+    </div>
 
     <br><br>
-    
+
     <center>
         <h1>
-            <?php
-            echo $championName;
-            ?>
+            <?php echo $championName."\n"; ?>
         </h1>
     </center>
 
@@ -67,17 +63,18 @@ if (isset($_POST["submit"])) {
         <div id="content">
             <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/champion/".$icon; ?>" class="champIcon" width = "200" height = "200" alt="Champ Pic">
             <h2 class="descriptionForChamp">
-            <?php echo $championDictionary['description']; ?>
+                <?php echo $championDictionary['description']."\n"; ?>
             </h2>
             <!-- CODE FOR THE ADVERTISEMENT SECTION
-            <div id="advertisement">
-            ADVERTISEMENT
-            </div>
-        -->
+                <div id="advertisement">
+                ADVERTISEMENT
+                </div>
+            -->
         </div>
     </ul>
 
     <br><br>
+
     <ul class="floating">
         <div class="content parallax">
             <div id="tableForAbilities">
@@ -85,34 +82,34 @@ if (isset($_POST["submit"])) {
                 <table class="tableForAbilities">
                     <tr>
                         <th>
-                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$q['image']; ?>" class="abilityIcon" width = "75" height = "75" alt="Q Ability">
+                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$q['image']; ?>" class="alignleft" width = "75" height = "75" alt="Q Ability">
                         </th>
                         <th>
-                            <?php echo $q['description']; ?>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$w['image']; ?>" class="abilityIcon" width = "75" height = "75" alt="W Ability">
-                        </th>
-                        <th>
-                            <?php echo $w['description']; ?>
+                            <?php echo $q['description']."\n"; ?>
                         </th>
                     </tr>
                     <tr>
                         <th>
-                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$e['image']; ?>" class="abilityIcon" width = "75" height = "75" alt="E Ability">
+                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$w['image']; ?>" class="alignleft" width = "75" height = "75" alt="W Ability">
                         </th>
                         <th>
-                            <?php echo $e['description']; ?>
+                            <?php echo $w['description']."\n"; ?>
                         </th>
                     </tr>
                     <tr>
                         <th>
-                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$r['image']; ?>" class="abilityIcon" width = "75" height = "75" alt="R Ability">
+                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$e['image']; ?>" class="alignleft" width = "75" height = "75" alt="E Ability">
                         </th>
                         <th>
-                            <?php echo $r['description']; ?>
+                            <?php echo $e['description']."\n"; ?>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img class="alignleft" src="<?php echo "http://ddragon.leagueoflegends.com/cdn/".$version."/img/spell/".$r['image']; ?>" class="alignleft" width = "75" height = "75" alt="R Ability">
+                        </th>
+                        <th>
+                            <?php echo $r['description']."\n"; ?>
                         </th>
                     </tr>
                 </table>
@@ -124,27 +121,23 @@ if (isset($_POST["submit"])) {
 
     <ul class="floating">
         <div class="content parallax">
-            <?php
+        <?php
             foreach ($dictionary['data'][$championKey]['recommended'] as $setKey => $set) {
-                echo "
-                <div id=\"standardBuildOrder\">
-                    <p class=\"standardBuildOrder\">".ucwords($setKey, "_")."</p>
-                    <table class=\"tableForStandardBuildOrder\">
-                        <tr>
-                        ";
+                echo "            <div id=\"standardBuildOrder\">\n";
+                echo "                <p class=\"standardBuildOrder\">".ucwords($setKey, "_")."</p>\n";
+                echo "                <center><table class=\"tableForStandardBuildOrder\">\n";
+                echo "                <tr>\n";
                     foreach ($set as $item) {
-                        echo "<th>";
-                        echo $item['name'];
-                        echo "<img class=\"alignleft\" src=\"http://ddragon.leagueoflegends.com/cdn/".$version."/img/item/".$item['image']."\" class=\"abilityIcon\" width = \"50\" height = \"50\" alt=\"".$item['name']."\">";
-                        echo "</th>";
+                        echo "                    <th>\n";
+                        echo "                        <center><img class=\"aligncenter\" src=\"http://ddragon.leagueoflegends.com/cdn/".$version."/img/item/".$item['image']."\" class=\"abilityIcon\" width = \"50\" height = \"50\" alt=\"".$item['name']."\"></center>\n";
+                        echo "                        ".$item['name']."\n";
+                        echo "                    </th>\n";
                     }
-                echo "
-                        </tr>
-                    </table>
-                </div>
-                ";
+                echo "                </tr>\n";
+                echo "                </table></center>\n";
+                echo "            </div>\n";
             }
-            ?>
+        ?>
         </div>
     </ul>
 </body>

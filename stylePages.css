@@ -4,11 +4,15 @@ body
 	background-size: cover;
 
 }
+.searchBar
+{
+	padding-right: 25px;
+	
+}
 
 .alignleft
 {
-
-	padding-left: 14em;
+	float: left;
 }
 .alignright
 {
@@ -61,6 +65,7 @@ color: white;
 {
 
 	display: inline;
+	font-size: 25px;
 	height: 150;
 	width: 100%;
 }
@@ -85,6 +90,7 @@ th
 
 .tableForAbilities, .tableForStandardBuildOrder, .tableForAlternateBuildOrder, th, td
 {
+
 	border: 1px solid black;
 	border-collapse: collapse;
 	font color: white;
