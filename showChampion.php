@@ -40,7 +40,7 @@ if (isset($_POST["submit"])) {
     <div id="titleLine">
         <p class="alignleft">
             <a href="/">
-                <img src="/logo.png" width = "75" height = "75" class="alignleft">
+                <img src="/newLogo.jpg" width = "75" height = "75" class="alignleft">
             </a>
         </p>
         <p class="alignright">
